@@ -9,6 +9,52 @@
     <title>Tico Rides</title>
 
 </head>
+<script>
+    // Esta función se ejecuta cuando se presiona el botón "Find my Ride!"
+    function findRide() {
+        // Obtenemos los valores de los campos de texto
+        var from = document.getElementById("fromInput").value;
+        var to = document.getElementById("toInput").value;
+
+        // Validamos que los campos no estén vacíos
+        if (from.trim() === "" || to.trim() === "") {
+            alert("Please fill in both 'From' and 'To' fields.");
+            return;
+        }
+
+        // Creamos una nueva fila en la tabla de resultados
+        var newRow = document.createElement("div");
+        newRow.classList.add("row", "align-items-start", "ml-3");
+
+        // Agregamos las columnas con los valores ingresados
+        newRow.innerHTML = `
+            <div class="col">
+                ${getCurrentUser()} <!-- Aquí necesitarás obtener el usuario actual -->
+            </div>
+            <div class="col">
+                ${from}
+            </div>
+            <div class="col">
+                ${to}
+            </div>
+            <div class="col">
+                <a href="#" class="button">View</a>
+            </div>
+        `;
+
+        // Agregamos la nueva fila a la tabla de resultados
+        document.querySelector(".table").appendChild(newRow);
+
+        // Mostramos un mensaje
+        alert("Ride encontrado!");
+    }
+
+    // Esta función simula la obtención del usuario actual
+    function getCurrentUser() {
+        return "barroyo"; 
+    }
+</script>
+</head>
 
 <body>
     <div class="container">
@@ -22,11 +68,12 @@
                         <p class="title">Search for a Ride</p>
                         <div class="box">
                             <span>Form</span> <!-- Texto "Form" -->
-                            <input type="text" class="input-text" value="Input Text" onfocus="this.value=''">
+                            <input type="text" id="fromInput" class="input-text" placeholder="From">
                             <!-- Input text con borde -->
                             <span>To</span> <!-- Texto "To" -->
-                            <input type="text" class="input-text" value="Input Text" onfocus="this.value=''">
-                            <button class="my-button">Find my Ride!</button> <!-- Botón "Find my Ride" -->
+                            <input type="text" id="toInput" class="input-text" placeholder="To">
+                            <button class="my-button" onclick="findRide()">Find my Ride!</button>
+                            <!-- Botón "Find my Ride" -->
                         </div>
                         <p class="title">Results for Rides that matches your criteria:</p>
                         <div class="table">
@@ -41,63 +88,62 @@
                                     End
                                 </div>
                                 <div class="col">
-
                                 </div>
-                            </div>
-                            <div class="row align-items-start ml-3">
-                                <div class="col">
-                                    barroyo
+                                <div class="row align-items-start ml-3">
+                                    <div class="col">
+                                        barroyo
+                                    </div>
+                                    <div class="col">
+                                        Barrio Los Angeles
+                                    </div>
+                                    <div class="col">
+                                        Ciudad Quesada
+                                    </div>
+                                    <div class="col">
+                                        <a href="" class="button">View</a>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    Barrio Los Angeles
+                                <div class="row align-items-start ml-3">
+                                    <div class="col">
+                                        barroyo
+                                    </div>
+                                    <div class="col">
+                                        Barrio Los Angeles
+                                    </div>
+                                    <div class="col">
+                                        Ciudad Quesada
+                                    </div>
+                                    <div class="col">
+                                        <a href="" class="button">View</a>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    Ciudad Quesada
+                                <div class="row align-items-start ml-3">
+                                    <div class="col">
+                                        barroyo
+                                    </div>
+                                    <div class="col">
+                                        Ciudad Quesada
+                                    </div>
+                                    <div class="col">
+                                        Los Angeles
+                                    </div>
+                                    <div class="col">
+                                        <a href="" class="button">View</a>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <a href="" class="button">View</a>
-                                </div>
-                            </div>
-                            <div class="row align-items-start ml-3">
-                                <div class="col">
-                                    barroyo
-                                </div>
-                                <div class="col">
-                                    Barrio Los Angeles
-                                </div>
-                                <div class="col">
-                                    Ciudad Quesada
-                                </div>
-                                <div class="col">
-                                    <a href="" class="button">View</a>
-                                </div>
-                            </div>
-                            <div class="row align-items-start ml-3">
-                                <div class="col">
-                                    barroyo
-                                </div>
-                                <div class="col">
-                                    Ciudad Quesada
-                                </div>
-                                <div class="col">
-                                    Los Angeles
-                                </div>
-                                <div class="col">
-                                    <a href="" class="button">View</a>
-                                </div>
-                            </div>
-                            <div class="row align-items-start ml-3">
-                                <div class="col">
-                                    yluna
-                                </div>
-                                <div class="col">
-                                    Ciudad Quesada
-                                </div>
-                                <div class="col">
-                                    San Pedro
-                                </div>
-                                <div class="col">
-                                    <a href="" class="button">View</a>
+                                <div class="row align-items-start ml-3">
+                                    <div class="col">
+                                        yluna
+                                    </div>
+                                    <div class="col">
+                                        Ciudad Quesada
+                                    </div>
+                                    <div class="col">
+                                        San Pedro
+                                    </div>
+                                    <div class="col">
+                                        <a href="" class="button">View</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +151,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 
 </html>

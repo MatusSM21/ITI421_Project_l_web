@@ -7,14 +7,13 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style_dashboard.css">
     <title>Tico Rides</title>
-
 </head>
 
 <body>
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-8">
-                <img src="logo.png" class="img" alt="Fines Ilustrativos">
+                <img src="cars.png" class="img" alt="Fines Ilustrativos">
                 <div class="card">
                     <div class="row align-items-start ml-1">
                         <div class="col">
@@ -74,8 +73,8 @@
                                     Ciudad Quesada
                                 </div>
                                 <div class="col">
-                                    <a href="" class="button">Edit -</a>
-                                    <a href="" class="button">Delete</a>
+                                    <button onclick="showMessage('Edit Brete')">Edit</button>
+                                    <button onclick="showMessage('Delete Brete')">Delete</button>
                                 </div>
                             </div>
                             <div class="row align-items-start ml-3">
@@ -89,13 +88,13 @@
                                     Los Angeles
                                 </div>
                                 <div class="col">
-                                    <a href="" class="button">Edit -</a>
-                                    <a href="" class="button">Delete</a>
+                                    <button onclick="showMessage('Edit Casa')">Edit</button>
+                                    <button onclick="showMessage('Delete Casa')">Delete</button>
                                 </div>
                             </div>
                             <div class="row align-items-start ml-3">
                                 <div class="col">
-                                    Of cina Chepe
+                                    Oficina Chepe
                                 </div>
                                 <div class="col">
                                     Ciudad Quesada
@@ -104,8 +103,8 @@
                                     San Pedro
                                 </div>
                                 <div class="col">
-                                    <a href="" class="button">Edit -</a>
-                                    <a href="" class="button">Delete</a>
+                                    <button onclick="showMessage('Edit Oficina Chepe')">Edit</button>
+                                    <button onclick="showMessage('Delete Oficina Chepe')">Delete</button>
                                 </div>
                             </div>
                         </div>
@@ -118,6 +117,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function showMessage(message) {
+            alert(message);
+        }
+    </script>
 </body>
 
 </html>

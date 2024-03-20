@@ -27,20 +27,20 @@
 .row {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    padding: 2% 2;
+    border-bottom: 2px solid #ddd;
     /* Agrega una línea horizontal debajo de cada fila */
 }
 
 .col {
     width: 25%;
     text-align: left;
-    border-right: 1px solid #ddd;
+    border-right: 5px solid #dbdada;
     /* Agrega una línea vertical a la derecha de cada columna */
 }
 
 .card {
-    border-radius: 10px;
+    border-radius:10px;
 }
 
 .col:last-child {
@@ -50,7 +50,7 @@
 
 .dashboard-link {
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .dashboard-link a {

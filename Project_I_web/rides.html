@@ -8,23 +8,28 @@
     <link rel="stylesheet" href="styles_rides.css">
     <title>Tico Rides</title>
 
+    <script>
+        function showMessage(message) {
+            alert(message);
+        }
+    </script>
 </head>
 
 <body>
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-8">
-                <img src="logo.png" class="img" alt="Fines Ilustrativos">
+                <img src="cars.png" class="img" alt="card">
                 <div class="card">
                     <div class="row align-items-start ml-1">
                         <div class="col">
-                            <a href="dashboard.html" class="buttonmain">Dashboard</a>
+                            <button class="buttonmain" onclick="showMessage('Dashboard')">Dashboard</button>
                         </div>
                         <div class="col">
-                            <a href="rides.html" class="buttonmain">Rides</a>
+                            <button class="buttonmain" onclick="showMessage('Rides')">Rides</button>
                         </div>
                         <div class="col">
-                            <a href="settings.html" class="buttonmain">Settings</a>
+                            <button class="buttonmain" onclick="showMessage('Settings')">Settings</button>
                         </div>
                     </div>
                 </div>
@@ -76,7 +81,7 @@
                                     <label for="saturday">Saturday</label><br>
                                     <input type="checkbox" id="sunday" name="day" value="Sunday">
                                     <label for="sunday">Sunday</label><br>
-                                    <button class="save">Guardar</button>
+                                    <button class="save" onclick="showMessage('Guardado')">Guardar</button>
                                 </div>
                             </div>
                         </div>

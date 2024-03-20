@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    max-width: 400px; /* Tamaño máximo del contenedor para ajustarse a dispositivos pequeños */
+    max-width: 1000px; 
     padding: 20px;
 }
 

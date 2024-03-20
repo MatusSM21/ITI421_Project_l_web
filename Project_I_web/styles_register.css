@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('background-image.jpg'); /* Agrega la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 400px; /* Tamaño máximo del contenedor para ajustarse a dispositivos pequeños */
+    padding: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo semitransparente */
+}
+
+.card-body {
+    text-align: center;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.pUser {
+    margin-top: 20px;
+    margin-bottom: 0;
+}

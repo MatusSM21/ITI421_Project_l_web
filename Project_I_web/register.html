@@ -2,38 +2,48 @@
 <html lang="en">
 
 <head>
+    <!-- Metadata specifying character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to Bootstrap CSS file -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to custom stylesheet -->
     <link rel="stylesheet" href="styles_register.css">
+    <!-- Title of the webpage -->
     <title>TicoRides</title>
 </head>
 
 <body>
+    <!-- Background image container -->
     <div class="background-image"></div>
     <div class="container">
+        <!-- Row for content alignment -->
         <div class="row justify-content-left mt-5">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
+                        <!-- Image -->
                         <img src="cars.png" class="img" alt="card">
-
+                        <!-- Registration Form -->
                         <form id="registrationForm">
                             <div>
-                                <label for="name" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="name" placeholder="Nombre">
-                                <label for="lastname" class="form-label">Apellido</label>
-                                <input type="password" class="form-control" id="lastname" placeholder="Apellido">
-                                <label for="phone" class="form-label">Teléfono</label>
+                                <!-- Input fields for user registration -->
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Name">
+                                <label for="lastname" class="form-label">Last Name</label>
+                                <input type="password" class="form-control" id="lastname" placeholder="Last Name">
+                                <label for="phone" class="form-label">Phone</label>
                                 <input type="text" class="form-control" id="phone" placeholder="(XXX) XXX-XXX">
-                                <label for="username" class="form-label">Nombre de Usuario</label>
-                                <input type="text" class="form-control" id="username" placeholder="Nombre de Usuario">
-                                <label for="password" class="form-label">Contraseña</label>
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" placeholder="Username">
+                                <label for="password" class="form-label">Password</label>
                                 <input type="password" class="form-control" id="password" placeholder="*******">
-                                <label for="rpassword" class="form-label">Repita Contraseña</label>
+                                <label for="rpassword" class="form-label">Repeat Password</label>
                                 <input type="password" class="form-control" id="rpassword" placeholder="*******">
-                                <p class="pUser"> Ya tiene Usuario? <a href="login.html">Iniciar Sesión</a></p>
-                                <button type="submit" class="">Registrese</button>
+                                <!-- Link to login page -->
+                                <p class="pUser">Already have an account? <a href="login.html">Log in</a></p>
+                                <!-- Submit button for registration -->
+                                <button type="submit" class="">Register</button>
                             </div>
                         </form>
                     </div>
@@ -43,8 +53,10 @@
     </div>
 
     <script>
-        document.getElementById("registrationForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the form from submitting
+        // Add event listener to the registration form submission
+        document.getElementById("registrationForm").addEventListener("submit", function (event) {
+            // Prevent the default form submission
+            event.preventDefault();
 
             // Get values from form inputs
             var name = document.getElementById("name").value;
@@ -60,10 +72,10 @@
             localStorage.setItem("username", username);
             localStorage.setItem("password", password);
 
-            // Show a message to the user
-            alert("¡Registro exitoso!");
+            // Display a success message to the user
+            alert("Registration successful!");
 
-            // Redirect to the main page
+            // Redirect the user to the main page
             window.location.href = "";
         });
     </script>

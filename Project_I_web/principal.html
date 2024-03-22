@@ -2,148 +2,133 @@
 <html lang="en">
 
 <head>
+    <!-- Document declaration and meta tags for character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External CSS libraries -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles_principal.css">
+
+    <!-- Title of the webpage -->
     <title>Tico Rides</title>
 
 </head>
-<script>
-    // Esta función se ejecuta cuando se presiona el botón "Find my Ride!"
-    function findRide() {
-        // Obtenemos los valores de los campos de texto
-        var from = document.getElementById("fromInput").value;
-        var to = document.getElementById("toInput").value;
-
-        // Validamos que los campos no estén vacíos
-        if (from.trim() === "" || to.trim() === "") {
-            alert("Please fill in both 'From' and 'To' fields.");
-            return;
-        }
-
-        // Creamos una nueva fila en la tabla de resultados
-        var newRow = document.createElement("div");
-        newRow.classList.add("row", "align-items-start", "ml-3");
-
-        // Agregamos las columnas con los valores ingresados
-        newRow.innerHTML = `
-            <div class="col">
-                ${getCurrentUser()} <!-- Aquí necesitarás obtener el usuario actual -->
-            </div>
-            <div class="col">
-                ${from}
-            </div>
-            <div class="col">
-                ${to}
-            </div>
-            <div class="col">
-                <a href="#" class="button">View</a>
-            </div>
-        `;
-
-        // Agregamos la nueva fila a la tabla de resultados
-        document.querySelector(".table").appendChild(newRow);
-
-        // Mostramos un mensaje
-        alert("Ride encontrado!");
-    }
-
-    // Esta función simula la obtención del usuario actual
-    function getCurrentUser() {
-        return "barroyo"; 
-    }
-</script>
-</head>
 
 <body>
+    <!-- Main container -->
     <div class="container">
+        <!-- Row for layout -->
         <div class="row justify-content-center mt-5">
+            <!-- Column for layout -->
             <div class="col-md-8">
+                <!-- Card for content -->
                 <div class="card">
+                    <!-- Card body -->
                     <div class="card-body">
+                        <!-- Link to login page -->
                         <a href="login.html" class="btn">Login</a>
-                        <img src="cars.png" class="img" alt="Fines Ilustrativos">
+                        <!-- Image with alt text -->
+                        <img src="cars.png" class="img" alt="For Illustrative Purposes">
+                        <!-- Main title -->
                         <h5 class="title">Welcome to TicoRides.com</h5>
+                        <!-- Subtitle -->
                         <p class="title">Search for a Ride</p>
+                        <!-- Input form for ride search -->
                         <div class="box">
-                            <span>Form</span> <!-- Texto "Form" -->
+                            <!-- Text indicating "From" -->
+                            <span>From</span>
+                            <!-- Input field for starting location -->
                             <input type="text" id="fromInput" class="input-text" placeholder="From">
-                            <!-- Input text con borde -->
-                            <span>To</span> <!-- Texto "To" -->
+                            <!-- Text indicating "To" -->
+                            <span>To</span>
+                            <!-- Input field for destination -->
                             <input type="text" id="toInput" class="input-text" placeholder="To">
+                            <!-- Button to initiate ride search -->
                             <button class="my-button" onclick="findRide()">Find my Ride!</button>
-                            <!-- Botón "Find my Ride" -->
                         </div>
-                        <p class="title">Results for Rides that matches your criteria:</p>
+                        <!-- Section for displaying ride search results -->
+                        <p class="title">Results for Rides that match your criteria:</p>
+                        <!-- Table for displaying ride results -->
                         <div class="table">
+                            <!-- Row for table header -->
                             <div class="row align-items-start ml-3">
+                                <!-- Column for displaying user -->
                                 <div class="col">
                                     User
                                 </div>
+                                <!-- Column for displaying starting point -->
                                 <div class="col">
                                     Start
                                 </div>
+                                <!-- Column for displaying destination -->
                                 <div class="col">
                                     End
                                 </div>
+                                <!-- Column for actions (e.g., view details) -->
                                 <div class="col">
                                 </div>
+                                <!-- Sample row for displaying ride results -->
                                 <div class="row align-items-start ml-3">
+                                    <!-- User -->
                                     <div class="col">
                                         barroyo
                                     </div>
+                                    <!-- Starting point -->
                                     <div class="col">
                                         Barrio Los Angeles
                                     </div>
+                                    <!-- Destination -->
                                     <div class="col">
                                         Ciudad Quesada
                                     </div>
+                                    <!-- Link to view ride details -->
                                     <div class="col">
                                         <a href="" class="button">View</a>
                                     </div>
                                 </div>
-                                <div class="row align-items-start ml-3">
-                                    <div class="col">
-                                        barroyo
-                                    </div>
-                                    <div class="col">
-                                        Barrio Los Angeles
-                                    </div>
-                                    <div class="col">
-                                        Ciudad Quesada
-                                    </div>
-                                    <div class="col">
-                                        <a href="" class="button">View</a>
-                                    </div>
+                            </div>
+                            <div class="row align-items-start ml-3">
+                                <div class="col">
+                                    barroyo
                                 </div>
-                                <div class="row align-items-start ml-3">
-                                    <div class="col">
-                                        barroyo
-                                    </div>
-                                    <div class="col">
-                                        Ciudad Quesada
-                                    </div>
-                                    <div class="col">
-                                        Los Angeles
-                                    </div>
-                                    <div class="col">
-                                        <a href="" class="button">View</a>
-                                    </div>
+                                <div class="col">
+                                    Barrio Los Angeles
                                 </div>
-                                <div class="row align-items-start ml-3">
-                                    <div class="col">
-                                        yluna
-                                    </div>
-                                    <div class="col">
-                                        Ciudad Quesada
-                                    </div>
-                                    <div class="col">
-                                        San Pedro
-                                    </div>
-                                    <div class="col">
-                                        <a href="" class="button">View</a>
-                                    </div>
+                                <div class="col">
+                                    Ciudad Quesada
+                                </div>
+                                <div class="col">
+                                    <a href="" class="button">View</a>
+                                </div>
+                            </div>
+                            <div class="row align-items-start ml-3">
+                                <div class="col">
+                                    barroyo
+                                </div>
+                                <div class="col">
+                                    Ciudad Quesada
+                                </div>
+                                <div class="col">
+                                    Los Angeles
+                                </div>
+                                <div class="col">
+                                    <a href="" class="button">View</a>
+                                </div>
+                            </div>
+                            <div class="row align-items-start ml-3">
+                                <div class="col">
+                                    yluna
+                                </div>
+                                <div class="col">
+                                    Ciudad Quesada
+                                </div>
+                                <div class="col">
+                                    San Pedro
+                                </div>
+                                <div class="col">
+                                    <a href="" class="button">View</a>
+                                              
                                 </div>
                             </div>
                         </div>
@@ -151,6 +136,55 @@
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+
+    <!-- JavaScript section -->
+    <script>
+        // Function executed when the "Find my Ride!" button is clicked
+        function findRide() {
+            // Retrieve values from input fields
+            var from = document.getElementById("fromInput").value;
+            var to = document.getElementById("toInput").value;
+
+            // Check if input fields are empty
+            if (from.trim() === "" || to.trim() === "") {
+                // Alert user to fill in both fields
+                alert("Please fill in both 'From' and 'To' fields.");
+                return;
+            }
+
+            // Create a new row in the results table
+            var newRow = document.createElement("div");
+            newRow.classList.add("row", "align-items-start", "ml-3");
+
+            // Populate the row with input values and current user
+            newRow.innerHTML = `
+                <div class="col">
+                    ${getCurrentUser()} <!-- Here you need to get the current user -->
+                </div>
+                <div class="col">
+                    ${from}
+                </div>
+                <div class="col">
+                    ${to}
+                </div>
+                <div class="col">
+                    <a href="#" class="button">View</a>
+                </div>
+            `;
+
+            // Add the new row to the results table
+            document.querySelector(".table").appendChild(newRow);
+
+            // Show a message indicating ride found
+            alert("Ride found!");
+        }
+
+        // Function simulating retrieval of current user
+        function getCurrentUser() {
+            return "barroyo";
+        }
+    </script>
+</body>
 
 </html>

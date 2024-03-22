@@ -13,7 +13,9 @@
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-8">
-                <img src="cars.png" class="img" alt="Fines Ilustrativos">
+                <!-- Logo -->
+                <img src="cars.png" class="img" alt="Illustrative Cars">
+                <!-- Main Navigation -->
                 <div class="card">
                     <div class="row align-items-start ml-1">
                         <div class="col">
@@ -27,6 +29,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- User Welcome Section -->
                 <div class="welcome-user">
                     <span>Welcome</span>
                     <a class="username">barroyo</a>
@@ -34,19 +37,25 @@
                     <h2 class="title">Dashboard</h2>
                 </div>
 
+                <!-- Dashboard Navigation -->
                 <div class="dashboard-link">
                     <a href="#">Dashboard</a>
                     <span class="arrow">></span>
                 </div>
 
+                <!-- Title for My Rides Section -->
                 <p class="title">My Rides</p>
+                <!-- Rides Card -->
                 <div class="card">
                     <div class="card-body">
+                        <!-- Title for Rides List -->
                         <p class="title">Your current list of Rides</p>
+                        <!-- Button to Add Ride -->
                         <div class="buttonplus" onclick="location.href='add.html'">
                             <div class="plus horizontal"></div>
                             <div class="plus vertical"></div>
                         </div>
+                        <!-- Rides Table -->
                         <div class="table">
                             <div class="row align-items-start ml-3">
                                 <div class="col">
@@ -62,6 +71,7 @@
                                     Actions
                                 </div>
                             </div>
+                            <!-- Sample Ride Entry -->
                             <div class="row align-items-start ml-3">
                                 <div class="col">
                                     Brete
@@ -73,10 +83,12 @@
                                     Ciudad Quesada
                                 </div>
                                 <div class="col">
+                                    <!-- Edit and Delete Buttons -->
                                     <button onclick="showMessage('Edit Brete')">Edit</button>
                                     <button onclick="showMessage('Delete Brete')">Delete</button>
                                 </div>
                             </div>
+                            <!-- Another Sample Ride Entry -->
                             <div class="row align-items-start ml-3">
                                 <div class="col">
                                     Casa
@@ -88,10 +100,12 @@
                                     Los Angeles
                                 </div>
                                 <div class="col">
+                                    <!-- Edit and Delete Buttons -->
                                     <button onclick="showMessage('Edit Casa')">Edit</button>
                                     <button onclick="showMessage('Delete Casa')">Delete</button>
                                 </div>
                             </div>
+                            <!-- Another Sample Ride Entry -->
                             <div class="row align-items-start ml-3">
                                 <div class="col">
                                     Oficina Chepe
@@ -103,11 +117,13 @@
                                     San Pedro
                                 </div>
                                 <div class="col">
+                                    <!-- Edit and Delete Buttons -->
                                     <button onclick="showMessage('Edit Oficina Chepe')">Edit</button>
                                     <button onclick="showMessage('Delete Oficina Chepe')">Delete</button>
                                 </div>
                             </div>
                         </div>
+                        <!-- Button to Add Ride -->
                         <div class="buttonplus2" onclick="location.href='add.html'">
                             <div class="plus horizontal"></div>
                             <div class="plus vertical"></div>
@@ -118,6 +134,7 @@
         </div>
     </div>
 
+    <!-- JavaScript Function to Show Message -->
     <script>
         function showMessage(message) {
             alert(message);
